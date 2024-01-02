@@ -128,7 +128,7 @@ export default function RootLayout({
         <ThemeProviders>
           <AnalyticsWrapper />
 
-          <div className="w-full flex flex-col justify-between items-center font-sans">
+          <div className="w-full flex flex-col justify-between items-center font-sans bg-gradient-to-r from-white/5 via-white/60 to-white/5 dark:from-slate-700/5 dark:via-slate-700/60 dark:to-slate-700/5">
             <SearchProvider>
               <Header />
               <main className="w-full flex flex-col items-center mb-auto">
