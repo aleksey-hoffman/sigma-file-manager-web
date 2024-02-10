@@ -9,7 +9,7 @@ import Image from 'next/image';
 
 const Header = () => {
   return (
-    <header className="flex items-center justify-between py-10 flex-wrap w-full mb-20 lg:mb-32 pt-6 wide-container">
+    <header className="flex items-center justify-between py-10 flex-wrap w-full mb-20 lg:mb-24 pt-6 wide-container">
       <div>
         <Link href="/" aria-label={siteConfig.logoTitle}>
           <div className="flex items-center gap-3 justify-between">

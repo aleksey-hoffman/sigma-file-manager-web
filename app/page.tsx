@@ -18,24 +18,36 @@ import {
   SparklesIcon,
   ThumbsUpIcon,
   ZapIcon,
+  ExternalLink,
 } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Home() {
   return (
     <div className="flex flex-col w-full items-center fancy-overlay">
       <div className="w-full flex flex-col items-center gap-8 md:gap-16">
-        <section className="wide-container">
-          <h1 className="text-4xl font-semibold leading-tight md:leading-tight max-w-xs sm:max-w-none md:text-6xl md:max-w-3xl">
+        <section className="fade-in-slide-up-1000ms wide-container flex items-center flex-col text-center">
+          <div className="flex items-center gap-2 mb-4 border-2 border-slate-500 px-2 py-2 rounded-xl">
+            <div className="pr-5 border-r-2 border-slate-500">
+              ⚡ Alpha v2 release is out! 
+            </div>
+            <a href="https://github.com/aleksey-hoffman/sigma-file-manager/releases/tag/v2.0.0-alpha.1" target='_blank'>
+              <Button variant={'ghost'} size={'xs'}>
+                Read post <ExternalLink className="ml-3" size={15}/>
+              </Button>
+            </a>
+          </div>
+          <h1 className="text-4xl font-semibold leading-tight md:leading-tight lg:text-8xl">
             Sigma File Manager
           </h1>
-          <p className="mt-6 md:text-xl md:max-w-3xl">
+          <p className="mt-6 md:text-xl md:max-w-3xl text-gray-400">
             A free, open-source, quickly evolving, modern file manager
-            (explorer) app for Windows and Linux.
+            (explorer) app.
           </p>
 
           <span className="flex flex-wrap gap-2 mt-6">
             <a href="/features" target="_blank" rel="noopener noreferrer">
-              <Button size="xl">See Features</Button>
+              <Button size="lg">See Features</Button>
             </a>
             <a
               href="https://github.com/aleksey-hoffman/sigma-file-manager"
@@ -43,11 +55,18 @@ export default function Home() {
               rel="noopener noreferrer"
               className="ml-4"
             >
-              <Button size="xl" variant="outlinePrimary">
+              <Button size="lg" variant="outlinePrimary">
                 Download on Github
               </Button>
             </a>
           </span>
+          <Image 
+            src="/static/images/sigma-file-manager-main.png" 
+            alt="" 
+            className='flex w-[100%] mt-24 shadow-2xl hover:scale-[1.02] ease-in-out duration-500' 
+            width={1331} 
+            height={749}
+          />
         </section>
       </div>
 
@@ -67,7 +86,7 @@ export default function Home() {
 
       <LandingProductFeature
         imagePosition="right"
-        imageSrc="/static/images/product-sample.webp"
+        imageSrc="/static/images/prevew-1.png"
         imageAlt="Product image"
         title="Introducing Sigma File Manager"
         description="Sigma File Manager is a rapidly evolving, modern file manager (explorer) app designed for Windows and Linux. It offers a sleek and intuitive interface, powerful file organization tools, and seamless integration with cloud storage services."
@@ -171,14 +190,6 @@ export default function Home() {
             size: 'half',
           },
         ]}
-      />
-
-      <LandingSaleCtaSection
-        title="Upgrade your file management experience"
-        description="Unlock the full potential of file management with Sigma File Manager. Don't settle for less when it comes to organizing your digital assets."
-        ctaHref={'#'}
-        ctaLabel={'Pre-order now'}
-        withBackground
       />
 
       <section className="wide-container mt-12">

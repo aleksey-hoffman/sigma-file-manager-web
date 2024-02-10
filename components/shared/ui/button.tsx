@@ -21,11 +21,12 @@ const buttonVariants = cva(
           'border border-secondary-300 hover:bg-secondary-100 dark:hover:bg-secondary-900',
         secondary:
           'bg-secondary-300/70 text-secondary-foreground hover:bg-secondary-300/90 dark:bg-secondary-700 dark:hover:bg-secondary-700/90',
-        ghost: 'hover:bg-accent hover:text-accent-foreground',
+        ghost: 'hover:bg-primary-100 dark:hover:bg-primary-900',
         link: 'text-primary underline-offset-4 hover:underline',
       },
       size: {
         default: 'h-10 px-4 py-2',
+        xs: 'h-7 rounded-md px-3',
         sm: 'h-9 rounded-md px-3',
         lg: 'h-11 rounded-md px-8',
         xl: 'h-12 rounded-md px-6 sm:px-10 text-md',

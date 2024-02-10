@@ -8,6 +8,7 @@ import { Metadata } from 'next';
 import { colors } from '@/data/config/colors.js';
 
 import '@/css/globals.css';
+import '@/css/transitions.css';
 import { SearchProvider } from '@/components/shared/SearchProvider';
 import { AnalyticsWrapper } from '@/components/shared/Analytics';
 
@@ -126,6 +127,7 @@ export default function RootLayout({
 
       <body className="flex flex-col bg-white text-black antialiased dark:bg-gray-950 dark:text-white min-h-screen">
         <ThemeProviders>
+          <img src="/static/images/blur-bg.png" className="fixed z-[-1] w-[100vw] h-[100vw] opacity-80 dark:opacity-50" />
           <AnalyticsWrapper />
 
           <div className="w-full flex flex-col justify-between items-center font-sans bg-gradient-to-r from-white/5 via-white/60 to-white/5 dark:from-slate-700/5 dark:via-slate-700/60 dark:to-slate-700/5">

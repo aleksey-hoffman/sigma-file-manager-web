@@ -1,6 +1,6 @@
 export const footerLinks = [
   {
-    columnName: 'Company',
+    columnName: 'About',
     links: [
       { href: '/', title: 'Home' },
       { href: '/features', title: 'Features' },
